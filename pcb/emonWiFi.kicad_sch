@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "emonWiFi")
-		(date "2025-12-10")
-		(rev "v1.1")
+		(date "2026-04-18")
+		(rev "v1.2")
 		(company "Open Energy Monitor / Tilt Ltd")
 		(comment 1 "github.com/openenergymonitor/emonWiFi")
 	)
@@ -5864,7 +5864,7 @@
 				)
 			)
 		)
-		(property "Footprint" "valcon-usb:CSP-USC16-TR"
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4110"
 			(at 241.3 58.42 0)
 			(effects
 				(font
@@ -5890,7 +5890,34 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C2765186"
+		(property "LCSC PN" "C45082768"
+			(at 237.49 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufactuer" "Same Sky"
+			(at 237.49 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "UJ20-C-H-G-SMT-5-P16-TR"
+			(at 237.49 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "179-UJ20CHGSMT5P16TR"
 			(at 237.49 58.42 0)
 			(effects
 				(font
