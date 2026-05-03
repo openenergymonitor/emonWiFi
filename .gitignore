@@ -44,3 +44,4 @@ TODO
 output-*/
 *.DS_Store
 .esphome/
+production/
