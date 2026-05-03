@@ -36,31 +36,27 @@ For an emonTx4, a 6 position **socket** is installed in the position marked **Tx
 
 ### Installing on your emonTx
 
-```{warning}
-You must remove power from the emonTx before installing the emonWiFi. Failure to do so can result in damage to either, or both, of the devices.
-```
+> [!WARNING]
+> You must remove power from the emonTx before installing the emonWiFi. Failure to do so can result in damage to either, or both, of the devices.
 
-```{warning}
-Ensure you have placed the emonWiFi into the correct position for your emonTx before applying power. Failure to do can result in damage to either, or both, of the devices.
-```
+> [!WARNING]
+> Ensure you have placed the emonWiFi into the correct position for your emonTx before applying power. Failure to do can result in damage to either, or both, of the devices.
 
-```{warning}
-You must not connect the USB-C port of the emonWiFi while it is connected to the emonTx.
-```
+> [!WARNING]
+> You must not connect the USB-C port of the emonWiFi while it is connected to the emonTx.
+
 
 #### emonTx4
 
-```{note}
-If you want to configure the emonTx4 over the WiFi connection, you must remove the solder bridge marked `JP6`. With this removed, you will not be able to configure the emonTx4 using the USB-C port
-```
+> [!NOTE]
+> If you want to configure the emonTx4 over the WiFi connection, you must remove the solder bridge marked `JP6`. With this removed, you will not be able to configure the emonTx4 using the USB-C port
 
 With the emonTx4's USB-C port facing downwards, insert the emonWiFi into the 6 pins in the centre left. The emonWiFi's USB-C port should face to the right.
 
 #### emonTx5
 
-```{note}
-If you want to configure the emonTx5 over the WiFi connection, you must cut the pad marked `USB_TX`. With this cut, you will not be able to configure the emonTx4 using the USB-C port. You can restore this functionality by applying a small solder bridge over the `USB_TX` pads.
-```
+> [!NOTE]
+> If you want to configure the emonTx5 over the WiFi connection, you must cut the pad marked `USB_TX`. With this cut, you will not be able to configure the emonTx4 using the USB-C port. You can restore this functionality by applying a small solder bridge over the `USB_TX` pads.
 
 With the emonTx6's USB-C port to the right, insert the emonWiFi into the pins below the Raspberry Pi socket as far to the right as possible with the emonWiFi's USB-C port also to the right.
 
