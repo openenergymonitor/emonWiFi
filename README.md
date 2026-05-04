@@ -8,15 +8,29 @@ It is available for the following OpenEnergyMonitor products:
 - [emonTx5 and emonPi2](https://github.com/openenergymonitor/emontx5)
 - [emonTx4](https://github.com/openenergymonitor/emontx4)
 
-The adapter uses a [Espressif ESP32-C3](https://www.espressif.com/en/products/socs/esp32-c3) and connects to the emonTx's serial port.
+The adapter uses an [Espressif ESP32-C3](https://www.espressif.com/en/products/socs/esp32-c3) and connects to the emonTx's serial port.
+
+> [!WARNING]
+> You must not connect the USB-C port of the emonWiFi while the emonWiFi is plugged into an emonTx. Doing so can cause damage to your emonTx.
 
 ## Setup
 
 ### Installing software
 
-To install firmware for the first time, hold down the button while plugging in the USB-C cable. This puts the ESP32 module into bootloader mode which allows firmware to be uploaded over the USB connection. After the first upload, you can use OTA updates.
+To install firmware for the first time, hold down the push button on the emonWiFi while plugging in the USB-C cable. This puts the ESP32 module into bootloader mode which allows firmware to be uploaded over the USB connection. After the first upload, you can use OTA updates.
 
 The emonWiFi is [natively supported by ESPHome](https://esphome.io/components/sensor/emontx/). You can find instructions here or setup directly from Home Assistant.
+
+The ESPHome configuration snippet for the emonWiFi is:
+
+```yaml
+uart:
+  id: emontx_uart # using UART2
+  rx_pin: GPIO20
+  tx_pin: GPIO21
+  baud_rate: 115200
+  rx_buffer_size: 2048
+```
 
 ### Installing the pin headers
 
@@ -42,21 +56,17 @@ For an emonTx4, a 6 position **socket** is installed in the position marked **Tx
 > [!WARNING]
 > Ensure you have placed the emonWiFi into the correct position for your emonTx before applying power. Failure to do can result in damage to either, or both, of the devices.
 
-> [!WARNING]
-> You must not connect the USB-C port of the emonWiFi while it is connected to the emonTx.
-
-
 #### emonTx4
 
 > [!NOTE]
-> If you want to configure the emonTx4 over the WiFi connection, you must remove the solder bridge marked `JP6`. With this removed, you will not be able to configure the emonTx4 using the USB-C port
+> If you want to configure the emonTx4 over the WiFi connection, you must remove the solder bridge marked `JP6`. With this removed, you will not be able to configure the emonTx4 using the USB-C port.
 
 With the emonTx4's USB-C port facing downwards, insert the emonWiFi into the 6 pins in the centre left. The emonWiFi's USB-C port should face to the right.
 
 #### emonTx5
 
 > [!NOTE]
-> If you want to configure the emonTx5 over the WiFi connection, you must cut the pad marked `USB_TX`. With this cut, you will not be able to configure the emonTx4 using the USB-C port. You can restore this functionality by applying a small solder bridge over the `USB_TX` pads.
+> If you want to configure the emonTx5 over the WiFi connection, you must cut the pad marked `USB_TX`. With this cut, you will not be able to configure the emonTx5 using the USB-C port. You can restore this functionality by applying a small solder bridge over the `USB_TX` pads.
 
 With the emonTx6's USB-C port to the right, insert the emonWiFi into the pins below the Raspberry Pi socket as far to the right as possible with the emonWiFi's USB-C port also to the right.
 
